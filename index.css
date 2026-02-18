@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@theme {
+  /* blue */
+  --color-ta-blue: rgb(49, 130, 246); /* #3182F6 */
+  --color-ta-blue-dark: rgb(27, 100, 218); /* #1B64DA */
+  --color-ta-blue-light: rgb(81, 162, 255); /* #51a2ff */
+
+  /* gray */
+  --color-ta-svg: rgb(176, 184, 193); /* #B0B8C1 */
+  --color-ta-gray: rgb(139, 149, 161); /* #8B95A1 */
+  --color-ta-gray-dark: rgb(51, 60, 72); /* #333D48 */
+  --color-ta-gray-light: rgb(209, 214, 219); /* #D1D6DB */
+
+  /* black */
+  --color-ta-black: rgb(78, 89, 88); /* #4E5958 */
+}
+
+@layer base {
+  html,
+  body {
+    @apply m-0 p-0;
+    font-family: 'Pretendard Variable';
+  }
+}
+
+@layer components {
+  .c-container {
+    @apply min-h-[calc(100vh)]; /* 뷰포트 */
+  }
+
+  .c-content {
+    @apply mx-auto max-w-[1140px] sm:w-full; /* 컨텐츠 내용 제한(1140px) */
+  }
+
+  .c-nav-menu-item {
+    @apply active:bg-ta-gray-light mx-2 my-auto block cursor-pointer rounded-lg px-5 py-3 whitespace-nowrap hover:bg-gray-100;
+  }
+
+  .c-nav-menu-item-list {
+    @apply active:bg-ta-gray-light mx-2 my-auto block cursor-pointer rounded-lg px-5 py-3 whitespace-nowrap hover:bg-gray-100;
+  }
+
+  .c-drawer-menu-item {
+    @apply active:bg-ta-gray-light z-99 my-auto cursor-pointer px-5 py-5 whitespace-nowrap hover:bg-gray-100;
+  }
+}
+
+@theme {
+  --animate-fade-in: fade-in 1.2s ease-in-out forwards;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  --animate-bounce-small: bounce-small 1.5s ease-in-out infinite;
+  @keyframes bounce-small {
+    0%,
+    100% {
+      transform: translateY(15%);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(0);
+      opacity: 0.2;
+    }
+  }
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}

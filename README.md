@@ -1,15 +1,16 @@
-## 브랜치 가이드
+## Git 가이드
 
 - master : 운영 서버 배포 브랜치
 - develop : 개발 서버 배포 브랜치
-- feature/detail : 개발 중인 로컬 페이지(기능 별 생성)
+- feature/... : 개발 중인 로컬 페이지(기능 별 생성)
 
-### 개발 순서
+### 브랜치 가이드
 
-1. feature/detail 로컬 개발
-2. feature/detail → develop Merge
-3. develop test
-4. develop → master Merge
+1. feature 브랜치에서 기능 개발
+2. feature 브랜치에서 develop 브랜치로 Merge
+3. develop 브랜치에서 기능 테스트
+4. develop 브랜치에서 master 브랜치로 Merge
+   (개인 프로젝트이므로, 배포 전까지는 형상관리를 master 브랜치에서만 진행)
 
 ## 커밋 컨벤션
 

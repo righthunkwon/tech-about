@@ -1,25 +1,27 @@
+import Page from '@/components/common/Page';
 import usePageTitle from '@/hooks/usePageTitle';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NotFoundPage: React.FC = () => {
-  usePageTitle('페이지를 찾을 수 없습니다. | 온말');
+  usePageTitle('페이지를 찾을 수 없습니다.');
 
   return (
     <>
-      <section className="mx-auto text-center">
-        <div className="mb-12 text-3xl leading-tight font-semibold sm:mb-12 sm:text-6xl">
-          <span className="block sm:inline">페이지를 </span>
-          <span className="block sm:inline">찾을 수 없습니다.</span>
+      <Page className="flex flex-col items-center text-center">
+        <div className="mt-60 mb-6">
+          <div className="text-ta-black-light my-2 text-2xl leading-tight font-semibold sm:text-3xl">
+            페이지를 찾지 못했습니다
+          </div>
+          <div className="text-ta-gray-dark text-sm sm:text-base">
+            페이지 주소가 정확한지 확인해주세요
+          </div>
         </div>
 
-        <Link
-          to={'/'}
-          className="bg-ta-blue hover:bg-ta-blue-dark rounded-lg px-4 py-2 text-white hover:cursor-pointer"
-        >
-          홈으로
+        <Link to={'/'} className="ta-button-default">
+          홈으로 가기
         </Link>
-      </section>
+      </Page>
     </>
   );
 };

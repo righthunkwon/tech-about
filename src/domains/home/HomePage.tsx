@@ -7,11 +7,11 @@ import HomeIntroduce4 from '@/domains/home/components/HomeIntroduce4';
 import usePageTitle from '@/hooks/usePageTitle';
 
 const HomePage: React.FC = () => {
-  usePageTitle('온말');
+  usePageTitle('tech-about');
 
   return (
     <>
-      <Page>
+      <Page className="mx-auto">
         <HomeIntroduce1 />
         <HomeIntroduce2 />
         <HomeIntroduce3 />

@@ -1,35 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BtnDrawerMenu from '@/assets/svgs/btn-drawer-menu.svg?react';
+import BtnClose from '@/assets/svgs/btn-close.svg?react';
 
-interface HeaderDrawerMenuProps {
+interface Props {
   open: boolean;
+  setOpen: () => void;
 }
 
-const HeaderDrawerMenu: React.FC<HeaderDrawerMenuProps> = ({ open }) => {
+const MENU_ITEMS = [
+  { id: '1', label: '공지사항', path: '/1' },
+  { id: '2', label: '시작하기', path: '/2' },
+  { id: '3', label: '문의하기', path: '/3' },
+];
+
+const HeaderDrawerMenu: React.FC<Props> = ({ open, setOpen }) => {
   return (
-    <>
+    <div className="flex items-center sm:hidden">
+      <button onClick={setOpen} className="z-101 cursor-pointer p-2">
+        {open ? (
+          <BtnClose width={20} height={20} />
+        ) : (
+          <BtnDrawerMenu width={20} height={20} />
+        )}
+      </button>
+
       <div
-        className={`border-ourGray fixed z-99 w-full overflow-hidden bg-white transition-all duration-400 sm:hidden ${open ? 'pointer-events-auto top-15 translate-y-0 opacity-100' : 'pointer-events-none top-15 -translate-y-2 opacity-0'} `}
+        className={`fixed left-0 w-full bg-white shadow-lg transition-all duration-400 ${open ? 'top-15 opacity-100' : 'pointer-events-none top-15 -translate-y-2 opacity-0'}`}
       >
-        <ul className="text-ourTextBlack">
-          <li className="c-drawer-menu-item">
-            <Link to={'/notice'} className="block w-full">
-              공지사항
-            </Link>
-          </li>
-          {/* <li className="c-drawer-menu-item">
-            <Link to={'/download'} className="block w-full">
-              다운로드
-            </Link>
-          </li> */}
-          <li className="c-drawer-menu-item">
-            <Link to={'/support'} className="block w-full">
-              문의하기
-            </Link>
-          </li>
+        <ul className="flex flex-col border-t border-gray-100">
+          {MENU_ITEMS.map((item) => (
+            <li key={item.id} className="ta-drawer-menu-item">
+              <Link to={item.path}>{item.label}</Link>
+            </li>
+          ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 

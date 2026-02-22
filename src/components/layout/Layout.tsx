@@ -6,9 +6,11 @@ import { Outlet } from 'react-router-dom';
 const Layout: React.FC = () => {
   return (
     <>
-      <Header />
-      <main>{<Outlet />}</main>
-      <Footer />
+      <div className="ta-layout">
+        <Header />
+        <main className="mx-auto w-full flex-1">{<Outlet />}</main>
+        <Footer />
+      </div>
     </>
   );
 };

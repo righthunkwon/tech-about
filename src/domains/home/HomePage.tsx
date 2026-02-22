@@ -1,4 +1,5 @@
 import React from 'react';
+import Page from '@/components/common/Page';
 import HomeIntroduce1 from '@/domains/home/components/HomeIntroduce1';
 import HomeIntroduce2 from '@/domains/home/components/HomeIntroduce2';
 import HomeIntroduce3 from '@/domains/home/components/HomeIntroduce3';
@@ -10,10 +11,12 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <HomeIntroduce1 />
-      <HomeIntroduce2 />
-      <HomeIntroduce3 />
-      <HomeIntroduce4 />
+      <Page>
+        <HomeIntroduce1 />
+        <HomeIntroduce2 />
+        <HomeIntroduce3 />
+        <HomeIntroduce4 />
+      </Page>
     </>
   );
 };

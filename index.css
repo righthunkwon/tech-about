@@ -13,36 +13,52 @@
   --color-ta-gray-light: rgb(209, 214, 219); /* #D1D6DB */
 
   /* black */
-  --color-ta-black: rgb(78, 89, 88); /* #4E5958 */
+  --color-ta-black: rgb(0, 0, 0); /* #4E5958 */
+  --color-ta-black-light: rgb(78, 89, 88); /* #4E5958 */
 }
 
 @layer base {
   html,
   body {
-    @apply m-0 p-0;
+    @apply m-0 p-0 text-[#333c48]; /* 기본 폰트색 : ta-black-light */
     font-family: 'Pretendard Variable';
   }
 }
 
 @layer components {
-  .c-container {
-    @apply min-h-[calc(100vh)]; /* 뷰포트 */
+  .ta-layout {
+    @apply min-h-[calc(100vh)]; /* 기본 높이: viewport */
   }
 
-  .c-content {
-    @apply mx-auto max-w-[1140px] sm:w-full; /* 컨텐츠 내용 제한(1140px) */
+  .ta-content {
+    @apply w-full max-w-[1140px]; /* 최대 넓이: 1140px */
   }
 
-  .c-nav-menu-item {
+  .ta-nav-menu-item {
     @apply active:bg-ta-gray-light mx-2 my-auto block cursor-pointer rounded-lg px-5 py-3 whitespace-nowrap hover:bg-gray-100;
   }
 
-  .c-nav-menu-item-list {
+  .ta-nav-menu-list {
     @apply active:bg-ta-gray-light mx-2 my-auto block cursor-pointer rounded-lg px-5 py-3 whitespace-nowrap hover:bg-gray-100;
   }
 
-  .c-drawer-menu-item {
+  .ta-drawer-menu-item {
     @apply active:bg-ta-gray-light z-99 my-auto cursor-pointer px-5 py-5 whitespace-nowrap hover:bg-gray-100;
+  }
+
+  .ta-button-default {
+    @apply block w-fit rounded-lg px-4 py-2 text-base font-medium transition-all sm:text-lg;
+    @apply bg-ta-blue hover:bg-ta-blue-dark text-white hover:cursor-pointer;
+  }
+
+  .ta-button-outline {
+    @apply block w-fit rounded-lg px-4 py-2 text-base font-medium transition-all sm:text-lg;
+    @apply text-ta-blue border-ta-gray-light hover:text-ta-blue-dark hover:border-ta-gray border-1 bg-white hover:cursor-pointer;
+  }
+
+  .ta-button-disabled {
+    @apply block w-fit rounded-lg px-4 py-2 text-base font-medium transition-all sm:text-lg;
+    @apply bg-ta-gray-light pointer-events-none text-white select-none;
   }
 }
 

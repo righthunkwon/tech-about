@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <Page className="mx-auto">
+      <Page>
         <HomeIntroduce1 />
         <HomeIntroduce2 />
         <HomeIntroduce3 />

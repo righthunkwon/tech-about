@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MENU_ITEMS = [
-  { id: 'notice', label: '공지사항', path: '/notice' },
-  { id: 'meta', label: '시작하기', path: '/meta' },
-  { id: 'support', label: '문의하기', path: '/support' },
+  { id: '1', label: 'Tech', path: '/1' },
+  { id: '2', label: 'SQL', path: '/2' },
+  { id: '3', label: 'Algorithm', path: '/3' },
 ];
 
 const HeaderNavbarMenu: React.FC = () => {
@@ -19,9 +19,6 @@ const HeaderNavbarMenu: React.FC = () => {
           </li>
         ))}
       </ul>
-      {/* <button className="border-ourBlue bg-ourBlue mx-2 my-auto hidden h-fit cursor-pointer rounded-lg border-1 px-1.5 py-1 whitespace-nowrap text-white sm:flex">
-        한국어
-      </button> */}
     </>
   );
 };

@@ -9,9 +9,9 @@ interface Props {
 }
 
 const MENU_ITEMS = [
-  { id: '1', label: '공지사항', path: '/1' },
-  { id: '2', label: '시작하기', path: '/2' },
-  { id: '3', label: '문의하기', path: '/3' },
+  { id: '1', label: 'Tech', path: '/1' },
+  { id: '2', label: 'SQL', path: '/2' },
+  { id: '3', label: 'Algorithm', path: '/3' },
 ];
 
 const HeaderDrawerMenu: React.FC<Props> = ({ open, setOpen }) => {

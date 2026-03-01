@@ -43,7 +43,7 @@
   }
 
   .ta-drawer-menu-item {
-    @apply active:bg-ta-gray-light text-ta-black-light z-99 my-auto cursor-pointer px-5 py-5 font-medium whitespace-nowrap hover:bg-gray-100;
+    @apply active:bg-ta-gray-light text-ta-black-light z-99 my-auto cursor-pointer font-medium whitespace-nowrap hover:bg-gray-100;
   }
 
   .ta-button-default {

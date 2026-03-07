@@ -18,7 +18,9 @@ const Header: React.FC = () => {
         <nav className="ta-content flex justify-between px-4">
           <Link to="/" className="flex items-center gap-1 px-2">
             <img className="h-6 w-6" src={logo} alt="logo" />
-            <span className="text-md font-semibold">tech-about</span>
+            <span className="text-ta-black text-md font-semibold">
+              tech-about
+            </span>
           </Link>
 
           {/* 1. 웹 */}

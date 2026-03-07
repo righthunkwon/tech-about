@@ -31,7 +31,7 @@
   }
 
   .ta-content {
-    @apply w-full max-w-[1140px]; /* 최대 넓이: 1140px → 전체 넓이를 적용해야 하는 배경을 제외 요소 최상단에 사용 */
+    @apply mx-auto w-full max-w-[1140px]; /* 최대 넓이: 1140px → 전체 넓이를 적용해야 하는 배경을 제외 요소 최상단에 사용 */
   }
 
   /* .ta-nav-menu-list {
@@ -39,11 +39,11 @@
   } */
 
   .ta-nav-menu-item {
-    @apply active:bg-ta-gray-light text-ta-black-light mx-2 my-auto block cursor-pointer rounded-lg px-5 py-3 font-medium whitespace-nowrap hover:bg-gray-100;
+    @apply active:bg-ta-gray-light text-ta-black-light mx-2 my-auto block cursor-pointer rounded-lg px-5 py-3 text-sm font-normal whitespace-nowrap hover:bg-gray-100;
   }
 
   .ta-drawer-menu-item {
-    @apply active:bg-ta-gray-light text-ta-black-light z-99 my-auto cursor-pointer font-medium whitespace-nowrap hover:bg-gray-100;
+    @apply active:bg-ta-gray-light text-ta-black-light z-99 my-auto cursor-pointer text-sm font-medium whitespace-nowrap hover:bg-gray-100;
   }
 
   .ta-button-default {

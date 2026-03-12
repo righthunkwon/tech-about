@@ -4,6 +4,29 @@ import left from '@/assets/svgs/btn-angle-left.svg';
 import right from '@/assets/svgs/btn-angle-right.svg';
 import usePageTitle from '@/hooks/usePageTitle';
 
+const TEMP_CONTENTS = [
+  {
+    id: 1,
+    title: '개발자는 AI에 대체될 것인가에 대한 고민',
+    description:
+      'AI가 개발자의 종말을 초래할까요? 이 질문에 대한 시각을 공유합니다.',
+    color: 'bg-red-400',
+  },
+  {
+    id: 2,
+    title: 'React와 Vue의 생산성 차이',
+    description:
+      'ERP 시스템 개발에서 두 프레임워크가 가지는 장단점을 분석합니다.',
+    color: 'bg-blue-400',
+  },
+  {
+    id: 3,
+    title: 'MyBatis를 활용한 쿼리 최적화',
+    description: 'MSSQL 환경에서 대용량 데이터를 처리하는 효율적인 방법입니다.',
+    color: 'bg-green-400',
+  },
+];
+
 const HomePage: React.FC = () => {
   usePageTitle('tech-about');
 
@@ -26,7 +49,10 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             <div className="mt-24 flex gap-3 text-center md:mt-0">
-              <button className="h-12 w-12 rounded-full bg-gray-100 p-2 hover:cursor-pointer hover:brightness-90">
+              <button
+                className="h-12 w-12 rounded-full bg-gray-100 p-2 hover:cursor-pointer hover:brightness-90"
+                // onClick={}
+              >
                 <img src={left} alt="notion" />
               </button>
               <button className="text-ta-bl h-12 w-12 rounded-full bg-gray-100 p-2 hover:cursor-pointer hover:brightness-90">
